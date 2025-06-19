@@ -15,7 +15,7 @@ import requests
 
 # ==== FUNGSI BARU UNTUK DOWNLOAD MODEL ====
 def download_file_from_google_drive(id, destination):
-    URL = "https://docs.google.com/uc?export=download"
+    URL = "https://drive.google.com/file/d/1_3LTlRaAezxfQg1DO7JrNY9WoWJCLEVE/view?usp=sharing"
     session = requests.Session()
     response = session.get(URL, params={'id': id, 'confirm': 't'}, stream=True)
     
