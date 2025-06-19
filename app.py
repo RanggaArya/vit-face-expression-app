@@ -15,7 +15,7 @@ import requests
 
 # ==== FUNGSI BARU UNTUK DOWNLOAD MODEL ====
 def download_file_from_google_drive(id, destination):
-    URL = "https://drive.google.com/file/d/1_3LTlRaAezxfQg1DO7JrNY9WoWJCLEVE/view?usp=sharing"
+    URL = "https://docs.google.com/uc?export=download"
     session = requests.Session()
     response = session.get(URL, params={'id': id, 'confirm': 't'}, stream=True)
     
@@ -52,7 +52,7 @@ st.set_page_config(
 MODEL_PATH = "vit_rafdb_compound_cbce_best.pth"
 if not os.path.exists(MODEL_PATH):
     # GANTI DENGAN FILE_ID ANDA DARI GOOGLE DRIVE
-    FILE_ID = "GANTI_DENGAN_ID_DARI_GOOGLE_DRIVE_ANDA" 
+    FILE_ID = "1_3LTlRaAezxfQg1DO7JrNY9WoWJCLEVE" 
     with st.spinner(f"File model tidak ditemukan. Mengunduh dari Google Drive..."):
         download_file_from_google_drive(FILE_ID, MODEL_PATH)
 MODEL_PATH = "vit_rafdb_compound_cbce_best.pth"
