@@ -1,0 +1,9 @@
+streamlit
+torch
+timm
+numpy
+Pillow
+albumentations
+matplotlib
+seaborn
+requests
